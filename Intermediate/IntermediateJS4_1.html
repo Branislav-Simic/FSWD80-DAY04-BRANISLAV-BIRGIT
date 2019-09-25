@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+
+	<div id = "result"><h2>Check Availability:</h2>
+
+
+			<p><h3>wantedNights:</h3></p>
+			<input name="nights" id="wantedNights" >
+			
+			<!-- <input type="submit" value = "submit" onClick="return submitData()"> -->
+
+			<button onclick="myFunction()">Availability?</button>
+
+		<p id="demo"></p>
+	</div>
+
+	<script>
+
+	/*Intermediate exercise 1 | Hotels
+
+
+Create three objects of type hotel. Each of them shares some properties and methods. The user should be able to insert a number of nights for each hotel and get back results, whether the hotel is available or not (for some number of nights). 
+For each hotel generate random integers from 1-10 that store available nights.
+If the hotel is available, provide a button labeled "I'll reserve" otherwise provide a message with text "Sorry, no free room for <number_of_nights> nights".
+
+Try to style the program with the colors #003580, #FFFFFF and #E9F0FA.*/
+
+function myFunction(){
+	var wantedNights = document.getElementById("wantedNights").value;
+	document.getElementById("demo").innerHTML = wantedNights;
+	console.log(wantedNights);
+}
+
+function HotelConstructor(name) {
+       this.name = name;
+       console.log(this.name);
+
+       this.wantedNights = document.getElementById("wantedNights").value;
+       console.log(this.wantedNights);
+       			
+	   this.available = Math.floor(Math.random() * 11);
+       console.log(this.available);
+
+       this.checkAvailability = function() {
+       		return this.available - Number(this.wantedNights);
+       	}
+
+       	this.message = function() {
+       		if (this.checkAvailability <= 0) {
+       			document.write("<br>" + this.name + ": Sorry no free room for " + this.wantedNights + "nights</br>");
+       		} else {
+       			document.write("I´ll reserve");
+       		}
+       	}  
+       }
+       
+
+	var hiltonHotel = new HotelConstructor("Hilton");
+	var marriottHotel = new HotelConstructor("Marriott");
+	var plazaHotel = new HotelConstructor("Plaza");
+
+	//document.write(hiltonHotel.checkAvailability());
+	document.write("<br>");
+	//hiltonHotel.message();
+
+
+
+	</script>
+	
+</body>
+</html>

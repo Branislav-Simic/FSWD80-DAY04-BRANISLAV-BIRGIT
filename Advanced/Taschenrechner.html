@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Mein Taschenrechner</title>
+		<link rel="stylesheet" href="taschenrechnerAdvancedStyle.css">
+		
+		<script src = "javascript.js"></script>
+		
+		
+	</head>
+	
+	</body>
+	<div class = "rechner">
+		<table>
+			<form name ="calcform">
+			<input class= "textfeld" id = "txt1">
+				<tr>
+					<td><div class = "button" onclick="nummereingabe(1)">1</div></td>
+					<td><div class = "button" onclick="nummereingabe(2)">2</div></td>
+					<td><div class = "button" onclick="nummereingabe(3)">3</div></td>
+					<td><div class = "button" onclick="nummereingabe('+')">+</div></td>
+					<td><div class = "button" onclick="nummereingabe('')">?</div></td>
+				</tr>
+				<tr>
+					<td><div class = "button" onclick="nummereingabe(4)">4</div></td>
+					<td><div class = "button" onclick="nummereingabe(5)">5</div></td>
+					<td><div class = "button" onclick="nummereingabe(6)">6</div></td>
+					<td><div class = "button" onclick="nummereingabe('-')">-</div></td>
+				</tr>
+				<tr>
+					<td><div class = "button" onclick="nummereingabe(7)">7</div></td>
+					<td><div class = "button" onclick="nummereingabe(8)">8</div></td>
+					<td><div class = "button" onclick="nummereingabe(9)">9</div></td>
+					<td><div class = "button" onclick="nummereingabe('*')">*</div></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><div class = "button" onclick="nummereingabe(0)">0</div></td>
+					<td></td>
+					<td><div class = "button" onclick="nummereingabe('/')">/</div></td>
+				</tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><div class = "button1" onclick="ergebnis()">=</td>
+				
+			</form>	
+		</table>
+	</div>
+	</body>
+</html>

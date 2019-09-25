@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+
+	<!-- <div id = "demo"> Whats your Age?
+
+	<form name = "subtraction">
+			<input type = "text" name = "year" value = "0">
+			<input type = "submit" value = "submit" onClick="return subtractData()">
+		</form>
+	</div> -->
+
+
+	<script>
+
+		/*Basic exercise 1 | Age
+		Create a function that uses your birth year as an argument and calculates your current age, use the Date object.*/
+		
+	/*		var d = new Date().getFullYear();
+			
+		function age(geburtsjahr) {
+			console.log(d);
+			var birthYear = document.forms["subtraction"]["year"].value
+		
+		// var cYear = d.getFullYear();
+		var subtraction = d - Number(year);
+		console.log(subtraction);
+		var result = document.getElementById("demo");
+		result.innerHTML = "<h2>Dein Alter ist " + subtraction + "</h2>";
+	}
+
+	subtractData();*/
+
+
+	function age(geburtsjahr) {
+		var d = new Date().getFullYear(); 
+		var subtraction = d - geburtsjahr; 
+		document.write("Your Age ist: " + subtraction);
+	}
+
+	age(1999);
+	</script>
+	
+</body>
+</html>

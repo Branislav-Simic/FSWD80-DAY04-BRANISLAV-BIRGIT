@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+
+	<script>
+
+	/*Basic exercise 3 | Personal information
+
+Write a function that will print your personal information - name, surname, age and short description using the return statement. Those values are defined as parameters to the function. All information should be passed as arguments, when the function is called.
+Expected outcome: Hi I am John Doe I am 25 years old and I am a future programmer.*/
+
+
+	function personalInformation(name, surname, age, description) {
+		/*var name = "John";
+		var surname = "Doe";
+		var age = 25;
+		var description = "I am a future programmer";*/
+
+		var result = "<h2>Hi I am " + name + " " + surname + " I am " + age + " years old and " + description + ".</h2>"
+
+		document.write(result);
+	}
+
+	personalInformation("John", "Doe", 25, "I am a future programmer");
+
+	</script>
+	
+</body>
+</html>
